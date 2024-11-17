@@ -11,7 +11,7 @@ Jun
 ***
 
 ## Project Description
-  a Tetris replica
+I will try to remake Tetris. So blocks filling up a line, hopefully includes the score and upcoming block.
 << Give an overview of your project >>
 
 ***    
