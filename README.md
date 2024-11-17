@@ -30,12 +30,11 @@ Jun
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
-
+1. Start Menu
+2. turnable blocks
+3. blocks line deleted once its been filled
+4. next block will be displayed
+5. game over screen
 ### Classes
 
 - << You should have a list of each of your classes with a description >>
