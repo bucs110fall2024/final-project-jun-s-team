@@ -1,32 +1,37 @@
 import pygame
 import random
 
+class TetrisGame:
+    def __init__(self):
+        pygame.init()
 
-pygame.init()
+        self.width, self.height = 300, 500
+        self.win = pygame.display.set_mode((self.width, self.height), pygame.NOFRAME)
 
-screen = width, height = 300, 500
-win = pygame.display.set_mode(screen, pygame.NOFRAME)
+        self.cellsize = 20
+        self.rows = (self.height - 120) // self.cellsize
+        self.cols = self.width // self.cellsize
 
-cellsize = 20
-rows = (height-120) // cellsize
-cols = width // cellsize
+        self.clock = pygame.time.Clock()
+        self.FPS = 24
 
-clock = pygame.time.Clock()
-FPS = 24
+        self.Assets = {
+            1: pygame.image.load('Assets/1.png'),
+            2: pygame.image.load('Assets/2.png'),
+            3: pygame.image.load('Assets/3.png'),
+            4: pygame.image.load('Assets/4.png'),
+        }
+    
+        self.font = pygame.font.Font('Fonts/Alternity-8w7J.ttf', 50)
+        self.font2 = pygame.font.SysFont('cursive', 25)
+    def run(self):
+        running = True
+        while running:
+            self.clock.tick(self.FPS)
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
 
-
-img1 = pygame.image.load('Assets/1.png')
-img2 = pygame.image.load('Assets/2.png')
-img3 = pygame.image.load('Assets/3.png')
-img4 = pygame.image.load('Assets/4.png')
-
-Assets = {1 : img1,
-	2 : img2,
-	3 : img3,
-	4 : img4}
-
-
-font = pygame.font.Font('Fonts/Alternity-8w7J.ttf', 50)
-font2 = pygame.font.SysFont('cursive', 25)
-
+            self.win.fill((0, 0, 0))  
+            pygame.display.update()
 
