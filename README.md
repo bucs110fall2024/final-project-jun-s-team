@@ -7,11 +7,11 @@
 ## Team Members
 
 << List team member names >>
-Jun
+
 ***
 
 ## Project Description
-I will try to remake Tetris. So blocks filling up a line, hopefully includes the score and upcoming block.
+
 << Give an overview of your project >>
 
 ***    
@@ -30,11 +30,12 @@ I will try to remake Tetris. So blocks filling up a line, hopefully includes the
 
 ### Features
 
-1. Start Menu
-2. turnable blocks
-3. blocks line deleted once its been filled
-4. next block will be displayed
-5. game over screen
+1. << Feature 1 >>
+2. << Feature 2 >>
+3. << Feature 3 >>
+4. << Feature 4 >>
+5. << Feature 5 >>
+
 ### Classes
 
 - << You should have a list of each of your classes with a description >>
