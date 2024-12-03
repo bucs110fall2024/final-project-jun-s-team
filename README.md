@@ -38,7 +38,13 @@
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- blocks.py
+  - creates the classic tetris block shapes
+- colors.py 
+  - used colors for the grids
+-grid.py
+  - create the grid for the background
+- controller.py
 
 ## ATP
 
