@@ -1,7 +1,7 @@
 import pygame
 import random
 
-class TetrisGame:
+class grid:
     def __init__(self):
         pygame.init()
 
