@@ -6,13 +6,13 @@
 
 ## Team Members
 
-<< List team member names >>
+<< Jun Zheng >>
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+<< I will be remaking Tetris, hopefully all the features from the classic game will be shown. Its a brick game that will have randomized bricks every time one is chosen. >>
 
 ***    
 
@@ -30,11 +30,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. << Start menu 1 >>
+2. << rotateable and moveable bricks >>
+3. << game over screen >>
+4. << next brick is shown >>
+5. << full line of bricks causes them to dissapear>>
 
 ### Classes
 
