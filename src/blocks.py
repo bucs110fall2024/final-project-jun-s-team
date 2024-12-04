@@ -6,11 +6,11 @@ pygame.init()
 
 class Blocks:
     # Load Assets
-    Assets = {
-        1: pygame.image.load('Assets/1.png'),
-        2: pygame.image.load('Assets/2.png'),
-        3: pygame.image.load('Assets/3.png'),
-        4: pygame.image.load('Assets/4.png'),
+    assets = {
+        1: pygame.image.load('assets/blue.png'),
+        2: pygame.image.load('assets/green.png'),
+        3: pygame.image.load('assets/red.png'),
+        4: pygame.image.load('assets/pink.png'),
     }
 
     # Define Shapes
@@ -32,11 +32,11 @@ class Blocks:
         self.color = random.randint(1, 4)
         self.orientation = 0
 
-    def image(self):
-        return self.shape[self.orientation]
-
     def rotate(self):
-        self.orientation = (self.orientation + 1) % len(self.shape)
+        self.rotation = (self.rotation + 1) % len(self.shape)
+
+    def current_positions(self):
+        return self.shape[self.rotation]
 
 font = pygame.font.SysFont("verdana", 50)
 font2 = pygame.font.SysFont("verdana", 15)
