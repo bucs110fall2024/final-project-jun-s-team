@@ -1,4 +1,4 @@
-from shapes import Shapes
+from blocks import Blocks
 from colors import Colors
 from grid import grid
 import random 
