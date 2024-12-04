@@ -15,11 +15,11 @@ class Blocks:
 
 	TYPES = ['I', 'Z', 'S', 'L', 'J', 'T', 'O']
 
-	def __init__(self, x, y):
+	def __init__(self, x, y, type):
 		self.x = x
 		self.y = y
-		self.type = random.choice(self.TYPES)
-		self.shape = self.FIGURES[self.type]
+		self.type = type
+		self.shape = self.FIGURES[type]
 		self.color = random.randint(1, 4)
 		self.rotation = 0
 

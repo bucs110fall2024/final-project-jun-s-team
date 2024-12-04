@@ -1,6 +1,4 @@
-import pygame
-#import your controller
-
+from controller import Controller
 import pygame
 import random
 
