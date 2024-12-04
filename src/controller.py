@@ -5,12 +5,10 @@ import random
 import pygame
 
 
+
 class Controller:
   def __init__(self):
-		self.grid = grid()
-		self.blocks = [IBlock(), JBlock(), LBlock(), OBlock(), SBlock(), TBlock(), ZBlock()]
-		self.current_block = self.get_random_block()
-		self.next_block = self.get_random_block()
+		
                 
   def __init__(self):
     #setup pygame data
