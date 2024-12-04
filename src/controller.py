@@ -4,8 +4,6 @@ from grid import grid
 import random 
 import pygame
 
-
-
 class Controller:
   def __init__(self):
 	  self.grid = grid()

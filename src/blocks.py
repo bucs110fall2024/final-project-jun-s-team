@@ -2,6 +2,13 @@ import random
 import pygame
 
 class Blocks:
+      self.Assets = {
+            1: pygame.image.load('Assets/1.png'),
+            2: pygame.image.load('Assets/2.png'),
+            3: pygame.image.load('Assets/3.png'),
+            4: pygame.image.load('Assets/4.png'),
+        }
+    
     FIGURES = {
         'I': [[1, 5, 9, 13], [4, 5, 6, 7]],
         'Z': [[4, 5, 9, 10], [2, 6, 5, 9]],
@@ -11,12 +18,13 @@ class Blocks:
         'T': [[1, 4, 5, 6], [1, 4, 5, 9], [4, 5, 6, 9], [1, 5, 6, 9]],
         'O': [[1, 2, 5, 6]]
     }
-
+    Blocks = ['I', 'Z', 'S', 'L', 'J', 'T', 'O']
+    
     def __init__(self, x, y, type):
         self.x = x
         self.y = y
-        self.type = type
-        self.shape = self.FIGURES[type]
+        self.type = random.choice(self.Blocks)
+        self.shape = self.FIGURES[self.type]
         self.color = random.randint(1, 4)
         self.rotation = 0
 
@@ -26,36 +34,6 @@ class Blocks:
     def rotate(self):
         self.rotation = (self.rotation + 1) % len(self.shape)
 
-# Child classes for each block type
-class IBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'I')
 
-class ZBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'Z')
-
-class SBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'S')
-
-class LBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'L')
-
-class JBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'J')
-
-class TBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'T')
-
-class OBlock(Blocks):
-    def __init__(self, x=0, y=0):
-        super().__init__(x, y, 'O')
-
-
-blocks = [IBlock(), JBlock(), LBlock(), OBlock(), SBlock(), TBlock(), ZBlock()]
 
 
