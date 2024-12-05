@@ -1,6 +1,4 @@
 import pygame
-from grid import Grid
-from blocks import Blocks
 
 import pygame
 from game import *
@@ -38,38 +36,9 @@ class Main:
 			pygame.display.update()
 			self.clock.tick()
 	
-
-
         		
 if __name__ == '__main__':
 	main = Main()
 	main.run()
-class Controller:
-   
-  
-  def mainloop(self):
-    #select state loop
-  ### below are some sample loop states ###
 
 
-  def menuloop(self):
-   
-      #event loop
-
-
-      #update data
-
-
-      #redraw
-     
-  
-  
-    
-  def gameoverloop(self):
-      #event loop
-
-
-      #update data
-
-
-      #redraw

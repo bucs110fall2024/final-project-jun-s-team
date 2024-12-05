@@ -1,48 +1,40 @@
 
-import controller
 import pygame
-import random
+from src.final_project.game import *
+from src.final_project.score import Score
+from src.final_project.preview import Preview
 
+class Main:
+	def __init__(self):
 
+		# general 
+		pygame.init()
+		self.display_surface = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
+		self.clock = pygame.time.Clock()
+		pygame.display.set_caption('Tetris')
 
-import pygame
-from sys import exit
+		self.game = Game()
+		self.score = Score()
+		self.preview = Preview()
+		
+	def run(self):
+		while True:
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					pygame.quit()
+					exit()
 
-# Constants for window dimensions and colors
-WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 600
-GRAY = (200, 200, 200)
+			# display 
+			self.display_surface.fill(GRAY)
+			
+			self.game.run()
+			self.score.run()
+			self.preview.run()
 
-def main():
-    # General setup
-    pygame.init()
-    display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-    clock = pygame.time.Clock()
-    pygame.display.set_caption('Tetris')
-
-    while True:
-        # Event handling
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-
-        # Display updates
-        display_surface.fill(GRAY)
-
-        # Update the game
-        pygame.display.update()
-        clock.tick(60)  # Limit to 60 FPS
-
-# Entry point for the program
-if __name__ == "__main__":
-    main()
-
-    #Create an instance on your controller object
-    #Call your mainloop
-    
-    ###### NOTHING ELSE SHOULD GO IN main(), JUST THE ABOVE 3 LINES OF CODE ######
-
-# https://codefather.tech/blog/if-name-main-python/
+			# updating the game
+			pygame.display.update()
+	
+        		
 if __name__ == '__main__':
-    main()
+	main = Main()
+	main.run()

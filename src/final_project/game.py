@@ -60,10 +60,7 @@ class Game:
         self.line_surface.set_alpha(120)
 
         self.tetromino = Tetromino('T', self.sprites)
-                
-    def move_down(self):
-
-
+                    
     def draw_grid(self):
         for col in range(1, COLUMNS):
             x = col * CELL_SIZE
