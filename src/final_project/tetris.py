@@ -89,4 +89,3 @@ class Tetris:
     def draw_score(self):
         score_text = self.font.render(f"Score: {self.score}", True, COLORS['TEXT'])
         self.screen.blit(score_text, (GAME_WIDTH + 20, GAME_HEIGHT - 60))
-        pygame.draw.rect(screen, COLORS['BG'], (c * CELL_SIZE, r * CELL_SIZE, CELL_SIZE, CELL_SIZE), 1)

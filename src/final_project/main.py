@@ -1,44 +1,12 @@
-import pygame
+from tetris import Tetris
+from grid import *
+from tetromino import *
+from constants import * 
 
-import pygame
-from game import *
-from score import Score
-from preview import Preview
+def main():
+    game = Tetris()
+    game.run()
 
-class Main:
-	def __init__(self):
-
-		# general 
-		pygame.init()
-		self.display_surface = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
-		self.clock = pygame.time.Clock()
-		pygame.display.set_caption('Tetris')
-
-		self.game = Game()
-		self.score = Score()
-		self.preview = Preview()
-		
-	def run(self):
-		while True:
-			for event in pygame.event.get():
-				if event.type == pygame.QUIT:
-					pygame.quit()
-					exit()
-
-			# display 
-			self.display_surface.fill(GRAY)
-			
-			self.game.run()
-			self.score.run()
-			self.preview.run()
-
-			# updating the game
-			pygame.display.update()
-			self.clock.tick()
-	
-        		
-if __name__ == '__main__':
-	main = Main()
-	main.run()
-
+if __name__ == "__main__":
+    main()
 
