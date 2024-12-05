@@ -27,6 +27,16 @@ class Controller:
             self.draw()
             pygame.display.flip()
             self.clock.tick(FPS)
+        self.display_game_over()
+    
+    def display_game_over(self):
+        game_over_image = pygame.image.load("game_over.jpg")  # Load the image
+        game_over_image = pygame.transform.scale(game_over_image, (WINDOW_WIDTH, WINDOW_HEIGHT))
+        self.screen.blit(game_over_image, (0, 0))
+
+        pygame.display.flip()
+        pygame.time.wait(3000)  # Wait 3 seconds before quitting
+
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -51,9 +61,12 @@ class Controller:
                 self.score += cleared_lines * 100
                 self.current_tetromino = self.next_tetromino
                 self.next_tetromino = Tetromino.get_new_tetromino()
-
-            self.fall_time = current_time  
-
+                if not self.grid.is_valid(self.next_tetromino.get_positions()):
+                    self.running = False
+                self.current_tetromino = self.next_tetromino
+                self.next_tetromino = Tetromino.get_new_tetromino()
+    
+            self.fall_time = current_time
     def move_tetromino(self, row_offset, col_offset):
         self.current_tetromino.move(row_offset, col_offset)
         if not self.grid.is_valid(self.current_tetromino.get_positions()):
