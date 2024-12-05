@@ -1,13 +1,24 @@
+from constants import *
+import random
 import pygame
-from final_project.grid import *
 
-class Score: 
-    def __init__(self):
-        self.surface = pygame.Surface((SIDEBAR_WIDTH,GAME_HEIGHT * SCORE_HEIGHT_FRACTION - PADDING))
-        self.rect = self.surface.get_rect(bottomright = (WINDOW_WIDTH - PADDING,WINDOW_HEIGHT - PADDING))
-        self.display_surface = pygame.display.get_surface()
-    
-    def run(self): 
-        self.surface.fill(GRAY)
-        self.display_surface.blit(self.surface,self.rect)
-        pygame.draw.rect(self.display_surface, LINE_COLOR, self.rect, 2, 2)
+class Tetromino:
+    def __init__(self, shape):
+        self.shape = shape
+        self.color = COLORS[shape]
+        self.blocks = SHAPES[shape]
+        self.row = 0
+        self.col = COLUMNS // 2
+
+    def get_positions(self):
+        return [(self.row + r, self.col + c) for r, c in self.blocks]
+
+    def move(self, row_offset, col_offset):
+        self.row += row_offset
+        self.col += col_offset
+
+    def rotate(self):
+        self.blocks = [(-c, r) for r, c in self.blocks]
+
+    def get_new_tetromino():
+        return Tetromino(random.choice(list(SHAPES.keys())))
