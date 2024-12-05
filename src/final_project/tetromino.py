@@ -1,5 +1,5 @@
 import pygame
-from game import *
+from final_project.grid import *
 
 class Score: 
     def __init__(self):

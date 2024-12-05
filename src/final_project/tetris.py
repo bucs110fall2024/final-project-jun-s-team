@@ -1,4 +1,4 @@
-from game import *
+from final_project.grid import *
 
 class Preview:
 	def __init__(self):

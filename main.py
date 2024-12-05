@@ -1,8 +1,8 @@
 
 import pygame
 from src.final_project.game import *
-from src.final_project.score import Score
-from src.final_project.preview import Preview
+from final_project.constants import Score
+from final_project.grid import Preview
 
 class Main:
 	def __init__(self):
