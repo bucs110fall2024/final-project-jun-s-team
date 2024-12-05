@@ -1,8 +1,8 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+# << Tetris-esque >>
+## CS110 Final Project  << Fall, 2024 >>
 
 ## Team Members
 
@@ -12,7 +12,7 @@
 
 ## Project Description
 
-<< I will be remaking Tetris, hopefully all the features from the classic game will be shown. Its a brick game that will have randomized bricks every time one is chosen. >>
+<< I will be remaking Tetris, hopefully all the features from the classic game will be shown. Its a brick game that clear lines once the line is filled with bricks or tetrominos. >>
 
 ***    
 
@@ -20,11 +20,11 @@
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+
 
 ## Program Design
 
@@ -38,10 +38,10 @@
 
 ### Classes
 
-- blocks.py
+- tetromino.py
   - creates the classic tetris block shapes
-- colors.py 
-  - used colors for the grids
+- constants.py 
+  - the variables i need, color, shapes, etc
 -grid.py
   - create the grid for the background
 - controller.py

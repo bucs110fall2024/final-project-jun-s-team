@@ -1,10 +1,10 @@
-from tetris import Tetris
+from controller import *
 from grid import *
 from tetromino import *
 from constants import * 
 
 def main():
-    game = Tetris()
+    game = Controller()
     game.run()
 
 if __name__ == "__main__":
