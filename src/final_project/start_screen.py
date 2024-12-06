@@ -6,7 +6,7 @@ class StartScreen:
     def __init__(self, screen):
         self.screen = screen
         self.clock = pygame.time.Clock()
-        self.manager = pygame_gui.UIManager((WINDOW_WIDTH, WINDOW_HEIGHT), 'theme.json') #lets try this for the MILLION TIME
+        self.manager = pygame_gui.UIManager((WINDOW_WIDTH, WINDOW_HEIGHT), 'theme.json') 
         self.running = True
 
         self.create_ui()

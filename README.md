@@ -45,6 +45,13 @@
 -grid.py
   - create the grid for the background
 - controller.py
+| - where the code to playing tetris resides
+- __init__.py 
+| - fixed some linking issues i had
+- start_screen.py
+| - my gui for the game, bouncing tetris, start button 
+-main2.py
+| - in case the one outside the src folder has hard time locating the module
 
 ## ATP
 
