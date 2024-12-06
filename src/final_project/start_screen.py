@@ -6,7 +6,7 @@ class StartScreen:
     def __init__(self, screen):
         self.screen = screen
         self.clock = pygame.time.Clock()
-        self.manager = pygame_gui.UIManager((WINDOW_WIDTH, WINDOW_HEIGHT), 'theme.json') 
+        self.manager = pygame_gui.UIManager((WINDOW_WIDTH, WINDOW_HEIGHT), 'theme.json') #lets try this for the MILLION TIME
         self.running = True
 
         self.create_ui()
@@ -36,7 +36,7 @@ class StartScreen:
         
     def run(self):
         while self.running:
-            time_delta = self.clock.tick(60) / 1000.0  
+            time_delta = self.clock.tick(60) / 1000.0  # Frame control
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -45,12 +45,12 @@ class StartScreen:
                     if event.user_type == pygame_gui.UI_BUTTON_PRESSED:
                         if event.ui_element == self.start_button:
                             print("Start Button Clicked")
-                            self.running = False  
+                            self.running = False  # Exit start screen and start the game
 
                 self.manager.process_events(event)
 
             self.manager.update(time_delta)
-            self.screen.fill(COLORS['BG'])  
+            self.screen.fill(COLORS['BG'])  # Use your background color
 
             self.manager.draw_ui(self.screen)
             pygame.display.flip()

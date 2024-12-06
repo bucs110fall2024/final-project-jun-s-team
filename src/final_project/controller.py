@@ -20,8 +20,8 @@ class Controller:
         self.running = True
         self.game_started = False
         self.fall_time = 0 
-        self.fall_speed = 0.5       
-          
+        self.fall_speed = 0.5  
+        
     def run(self):
         while self.running:
             self.handle_events()
