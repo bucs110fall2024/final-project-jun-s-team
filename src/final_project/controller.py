@@ -74,8 +74,6 @@ class Controller:
                 self.next_tetromino = Tetromino.get_new_tetromino()
                 if not self.grid.is_valid(self.next_tetromino.get_positions()):
                     self.running = False
-                self.current_tetromino = self.next_tetromino
-                self.next_tetromino = Tetromino.get_new_tetromino()
     
             self.fall_time = current_time
     
