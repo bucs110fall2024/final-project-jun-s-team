@@ -44,8 +44,8 @@ class Controller:
         pygame.display.flip()
         
         while True:
-            event = pygame.event.wait()  # Wait for a single event
-            if event.type == pygame.QUIT:  # Exit on close button
+            event = pygame.event.wait()  
+            if event.type == pygame.QUIT:  
                 pygame.quit()
                 exit()
                 
@@ -98,6 +98,8 @@ class Controller:
         self.draw_next_tetromino()
         self.draw_score()
 
+
+ #needs fixing
     def draw_tetromino(self, tetromino):
         for r, c in tetromino.get_positions():
             if r >= 0:
