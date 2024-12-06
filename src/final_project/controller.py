@@ -1,8 +1,16 @@
+import os
+
+print(os.getcwd())
+
 import pygame
 import time
+
 from constants import *
 from tetromino import Tetromino
 from grid import *
+
+game_over_image = pygame.image.load("assets/game-over-7952252_1280.png")
+
 
 class Controller:
     def __init__(self):
@@ -30,14 +38,17 @@ class Controller:
         self.display_game_over()
     
     def display_game_over(self):
-        game_over_image = pygame.image.load("game_over.jpg")  # Load the image
+        game_over_image = pygame.image.load("assets/game-over-7952252_1280.png")
         game_over_image = pygame.transform.scale(game_over_image, (WINDOW_WIDTH, WINDOW_HEIGHT))
         self.screen.blit(game_over_image, (0, 0))
-
         pygame.display.flip()
-        pygame.time.wait(3000)  # Wait 3 seconds before quitting
-
-
+        
+        while True:
+            event = pygame.event.wait()  # Wait for a single event
+            if event.type == pygame.QUIT:  # Exit on close button
+                pygame.quit()
+                exit()
+                
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -67,6 +78,7 @@ class Controller:
                 self.next_tetromino = Tetromino.get_new_tetromino()
     
             self.fall_time = current_time
+    
     def move_tetromino(self, row_offset, col_offset):
         self.current_tetromino.move(row_offset, col_offset)
         if not self.grid.is_valid(self.current_tetromino.get_positions()):
