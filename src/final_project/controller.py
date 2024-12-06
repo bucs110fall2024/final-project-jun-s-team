@@ -9,7 +9,6 @@ from constants import *
 from tetromino import Tetromino
 from grid import *
 
-game_over_image = pygame.image.load("assets/game-over-7952252_1280.png")
 
 
 class Controller:
@@ -17,17 +16,18 @@ class Controller:
         pygame.init()
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.clock = pygame.time.Clock()
+        pygame.display.set_caption("Tetris")
         self.grid = Grid()
         self.current_tetromino = Tetromino.get_new_tetromino()
         self.next_tetromino = Tetromino.get_new_tetromino()
         self.score = 0
         self.font = pygame.font.Font(None, 36)
         self.running = True
-        
-        
+        self.game_started = False
         self.fall_time = 0 
         self.fall_speed = 0.5  
-
+    
+               
     def run(self):
         while self.running:
             self.handle_events()
