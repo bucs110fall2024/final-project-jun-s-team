@@ -2,6 +2,7 @@ import os
 print(os.getcwd())
 import pygame
 import time
+import pygame_gui
 from constants import *
 from tetromino import Tetromino
 from grid import *
@@ -21,15 +22,6 @@ class Controller:
         self.game_started = False
         self.fall_time = 0 
         self.fall_speed = 0.5  
-        
-    def run(self):
-        while self.running:
-            self.handle_events()
-            self.update()
-            self.draw()
-            pygame.display.flip()
-            self.clock.tick(FPS)
-        self.display_game_over()
         
     def display_game_over(self):
         game_over_image = pygame.image.load("assets/game-over-7952252_1280.png")
@@ -110,6 +102,14 @@ class Controller:
     def draw_words_next_tetromino(self):
         words_next_tetromino_text = self.font.render("Next Piece:", True, COLORS['TEXT'])
         self.screen.blit(words_next_tetromino_text, (GAME_WIDTH + 20, 20)) 
-
+    
+    def run(self):
+        while self.running:
+            self.handle_events()
+            self.update()
+            self.draw()
+            pygame.display.flip()
+            self.clock.tick(FPS)
+        self.display_game_over()
         
     
