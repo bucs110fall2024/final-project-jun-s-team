@@ -1,7 +1,4 @@
 from controller import *
-from grid import *
-from tetromino import *
-from constants import * 
 from start_screen import *
 
 

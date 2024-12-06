@@ -1,15 +1,10 @@
 import os
-
 print(os.getcwd())
-
 import pygame
 import time
-
 from constants import *
 from tetromino import Tetromino
 from grid import *
-
-
 
 class Controller:
     def __init__(self):
@@ -25,9 +20,8 @@ class Controller:
         self.running = True
         self.game_started = False
         self.fall_time = 0 
-        self.fall_speed = 0.5  
-    
-               
+        self.fall_speed = 0.5       
+          
     def run(self):
         while self.running:
             self.handle_events()
@@ -36,7 +30,7 @@ class Controller:
             pygame.display.flip()
             self.clock.tick(FPS)
         self.display_game_over()
-    
+        
     def display_game_over(self):
         game_over_image = pygame.image.load("assets/game-over-7952252_1280.png")
         game_over_image = pygame.transform.scale(game_over_image, (WINDOW_WIDTH, WINDOW_HEIGHT))
