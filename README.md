@@ -19,13 +19,9 @@
 ## GUI Design
 
 ### Initial Design
-
-
-
+assets/initial_gui.jpg
 ### Final Design
-
-
-
+assets/final_gui.jpg
 ## Program Design
 
 ### Features
