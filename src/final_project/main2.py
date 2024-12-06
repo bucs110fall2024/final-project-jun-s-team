@@ -1,3 +1,4 @@
+import pygame
 from controller import *
 from start_screen import *
 

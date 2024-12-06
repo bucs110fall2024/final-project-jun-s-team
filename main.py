@@ -1,3 +1,4 @@
+import pygame
 from src.final_project.controller import *
 from src.final_project.start_screen import *
 
