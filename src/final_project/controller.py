@@ -95,9 +95,8 @@ class Controller:
         self.draw_tetromino(self.current_tetromino)
         self.draw_next_tetromino()
         self.draw_score()
+        self.draw_words_next_tetromino() 
 
-
- #needs fixing
     def draw_tetromino(self, tetromino):
         for r, c in tetromino.get_positions():
             if r >= 0:
@@ -105,7 +104,7 @@ class Controller:
 
     def draw_next_tetromino(self):
         x_offset = GAME_WIDTH + 20  
-        y_offset = 20
+        y_offset = 60
         for r, c in self.next_tetromino.blocks:
             pygame.draw.rect(self.screen, self.next_tetromino.color,
                              (x_offset + (c + 2) * 30, y_offset + (r + 2) * 30, 30, 30))
@@ -113,3 +112,10 @@ class Controller:
     def draw_score(self):
         score_text = self.font.render(f"Score: {self.score}", True, COLORS['TEXT'])
         self.screen.blit(score_text, (GAME_WIDTH + 20, GAME_HEIGHT - 60))
+    
+    def draw_words_next_tetromino(self):
+        words_next_tetromino_text = self.font.render("Next Piece:", True, COLORS['TEXT'])
+        self.screen.blit(words_next_tetromino_text, (GAME_WIDTH + 20, 20)) 
+
+        
+    
