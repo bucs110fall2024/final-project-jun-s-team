@@ -54,7 +54,7 @@ Test Steps:
 - Step 1: Start Game
   - Press the left arrow key; verify the piece moves left.
   - Press the right arrow key; verify the piece moves right.
-  - Press the down arrow key; verify the piece accelerates downward.
+  - Tap the down arrow key; verify the piece goes downward.
   - **Expected Outcome**
     - Pieces move appropriately based on arrow inputs.
 
@@ -82,7 +82,7 @@ Test Description: Confirm that the game ends when pieces stack beyond the gridâ€
 Test Steps:
 - Step 1: Start Game
   - Allow pieces to stack until they exceed the grid's top.
-  - Verify that the game ends and displays a "Game Over" message.
+  - Verify that the game ends and displays a "Game Over" png.
   - **Expected Outcome**
     - Game stops, and a "Game Over" message is displayed.
 
